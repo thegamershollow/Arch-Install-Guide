@@ -52,7 +52,7 @@ start fdisk
 # fdisk /dev/the_disk_to_be_partitioned
 ```
 
-####Example disk layout
+###Example disk layout
 
 | Mount point on the Installed System | Partition | Partition Type |Suggested Size|
 | :---------- | :---                          | :---                   | :---    |
@@ -128,7 +128,7 @@ turn on swap
 
 ### Installation
 
-####Install essential packages
+###Install essential packages
 
 packages that you shoul install
 
@@ -155,7 +155,7 @@ packages that you shoul install
 # pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
 ```
 
-####Fstab
+### Fstab
 
 ```
 # genfstab -U /mnt >> /mnt/etc/fstab
@@ -163,13 +163,13 @@ packages that you shoul install
 # cat /mnt/etc/fstab
 ```
 
-#### arch chroot
+### arch chroot
 
 ```
 # arch-chroot /mnt
 ```
 
-#### Localization
+### Localization
 
 Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed UTF-8 locales. Generate the locales by running:
 
@@ -185,7 +185,7 @@ Create the locale.conf file, and set the LANG variable accordingly:
 LANG=en_US.UTF-8
 ```
 
-#### network config
+### network config
 
 Create the hostname file:
 
@@ -195,7 +195,7 @@ Create the hostname file:
 *yourhostname*
 ```
 
-#### Root Password
+### Root Password
 
 set the root password:
 
@@ -203,7 +203,7 @@ set the root password:
 # passwd
 ```
 
-#### Create a User
+### Create a User
 
 add your user:
 
@@ -218,7 +218,7 @@ Uncomment the wheel group to allow execution of any command( ie: remove the # fr
 EDITOR=vim visudo
 ```
 
-#### Grub Config
+### Grub Config
 
 Install the grub bootloader:
 
@@ -232,7 +232,7 @@ Generate the grub config file:
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### Reboot
+### Reboot
 
 ```
 # reboot
