@@ -136,6 +136,8 @@ packages that you shoul install
  - base-devel
  - linux
  - linux-firmware
+ - grub
+ - efibootmgr
  - cpu microcode (amd-ucode for amd chips or intel-ucode for intel chips)
  - git
  - zsh
@@ -152,7 +154,7 @@ packages that you shoul install
 
  install packages
 ```
-# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
+# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode grub efibootmgr git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
 ```
 
 #### Fstab
@@ -208,14 +210,14 @@ set the root password:
 add your user:
 
 ```
-#useradd -mG wheel yourname
+# useradd -mG wheel yourname
 ```
 
 
 Uncomment the wheel group to allow execution of any command( ie: remove the # from the wheel line below where it says something like: "Uncomment to let members of group wheel execute any action" ). if you want to use nano then write EDITOR=nano instead.
 
 ```
-EDITOR=vim visudo
+# EDITOR=vim visudo
 ```
 
 #### Grub Config
@@ -223,13 +225,13 @@ EDITOR=vim visudo
 Install the grub bootloader:
 
 ```
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=Arch
+# grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=Arch
 ```
 
 Generate the grub config file:
 
 ```
-grub-mkconfig -o /boot/grub/grub.cfg
+# grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 #### Reboot
