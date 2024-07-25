@@ -30,19 +30,27 @@ After flashing the ISO to you USB drive, plug the drive into your computer and s
 after booting into the installer you will be greeted with the command line. 
 
 check if you system supports UEFI
-```# cat /sys/firmware/efi/fw_platform_size```
+```
+# cat /sys/firmware/efi/fw_platform_size
+```
 
 sync the clock with UTC
 
-```# timedatectl```
+```
+# timedatectl
+```
 
 list drives
 
-```lsblk```
+```
+# lsblk
+```
 
 start fdisk
 
-```# fdisk /dev/the_disk_to_be_partitioned```
+```
+# fdisk /dev/the_disk_to_be_partitioned
+```
 
 ####Example disk layout
 
@@ -81,24 +89,42 @@ ENTER
 I will be using EXT4 for this example but you can use any format that is supported though there might be extra setup for BTRFS.
 
 create a root partition
-```# mkfs.ext4 /dev/root_partition/```
+
+```
+# mkfs.ext4 /dev/root_partition/
+```
 
 create a swap partition
-```# mkswap /dev/swap_partition```
+
+```
+# mkswap /dev/swap_partition
+```
 
 create an efi partition
-```# mkfs.fat -F 32 /dev/efi_system_partition```
+
+```
+# mkfs.fat -F 32 /dev/efi_system_partition
+```
 
 ### Mount the file systems
 
 mount the root partition
-```# mount /dev/root_partition /mnt```
+
+```
+# mount /dev/root_partition /mnt
+```
 
 mount the efi partition
-```# mount --mkdir /dev/efi_system_partition /mnt/efi```
+
+```
+# mount --mkdir /dev/efi_system_partition /mnt/efi
+```
 
 turn on swap
-```# swapon /dev/swap_partition```
+
+```
+# swapon /dev/swap_partition
+```
 
 ### Installation
 
@@ -125,22 +151,31 @@ packages that you shoul install
  - nano or vim
 
  install packages
-```# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano```
+```
+# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
+```
 
 ####Fstab
 
-```# genfstab -U /mnt >> /mnt/etc/fstab```
-```# cat /mnt/etc/fstab```
+```
+# genfstab -U /mnt >> /mnt/etc/fstab
+
+# cat /mnt/etc/fstab
+```
 
 #### arch chroot
 
-```# arch-chroot /mnt```
+```
+# arch-chroot /mnt
+```
 
 #### Localization
 
 Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed UTF-8 locales. Generate the locales by running:
 
-```# locale-gen```
+```
+# locale-gen
+```
 
 Create the locale.conf file, and set the LANG variable accordingly:
 
