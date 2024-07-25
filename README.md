@@ -52,7 +52,7 @@ start fdisk
 # fdisk /dev/the_disk_to_be_partitioned
 ```
 
-###Example disk layout
+### Example disk layout
 
 | Mount point on the Installed System | Partition | Partition Type |Suggested Size|
 | :---------- | :---                          | :---                   | :---    |
@@ -60,7 +60,7 @@ start fdisk
 | [SWAP]      |   /dev/swap_partition         | Linux Swap             | Use this: [Swap Calc](https://pickwicksoft.github.io/swapcalc/) |
 | /           |   /dev/root_partition         | Linux x86_64 root (/)  | Remainder of the device. <br>At least 23–32 GiB. |
 
-###Creating and Formating the partitions
+### Creating and Formating the partitions
 
 ```
 When I type enter hit the return key
