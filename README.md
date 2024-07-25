@@ -139,6 +139,8 @@ packages that you shoul install
  - grub
  - efibootmgr
  - cpu microcode (amd-ucode for amd chips or intel-ucode for intel chips)
+ - iwd
+ - networkmanager
  - git
  - zsh
  - zsh-autosuggestions
@@ -154,7 +156,7 @@ packages that you shoul install
 
  install packages
 ```
-# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode grub efibootmgr git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
+# pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode grub efibootmgr iwd networkmanager git zsh zsh-autosuggestions zsh-completions openssh python3 hyfetch sudo man reflector pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber nano
 ```
 
 #### Fstab
