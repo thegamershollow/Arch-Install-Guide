@@ -55,10 +55,10 @@ start fdisk
 ####Example disk layout
 
 | Mount point on the Installed System | Partition | Partition Type |Suggested Size|
-| :---------------- | :--- | :--- | :--- |
-| ```/efi```        |   ```/dev/efi_system_partition```   | ```Efi``` |```512 MiB``` |
-| ```[SWAP]```           |   ```/dev/swap_partition```  | ```Linux Swap``` |```Use this: ```[Swap Calc](https://pickwicksoft.github.io/swapcalc/) |
-| ```/``` |  ```/dev/root_partition```   | ```Linux x86_64 root (/)``` |```Remainder of the device. ```<br>```At least 23–32 GiB. ```|
+| :---------- | :---                          | :---                   | :---    |
+| /efi        |   /dev/efi_system_partition   | Efi                    | 512 MiB |
+| [SWAP]      |   /dev/swap_partition         | Linux Swap             | Use this: [Swap Calc](https://pickwicksoft.github.io/swapcalc/) |
+| /           |   /dev/root_partition         | Linux x86_64 root (/)  | Remainder of the device. <br>At least 23–32 GiB. |
 
 ###Creating and Formating the partitions
 
