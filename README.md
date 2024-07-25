@@ -236,6 +236,14 @@ Generate the grub config file:
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+#### Enable networking
+
+```
+# systemctl enable iwd
+
+# systemctl enable NetworkManager
+```
+
 #### Reboot
 
 ```
