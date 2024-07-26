@@ -235,10 +235,10 @@ Generate the grub config file:
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### Enable networking
+#### Enable ssh and Networking
 
 ```
-# systemctl enable iwd
+# systemctl enable ssd
 
 # systemctl enable NetworkManager
 ```
