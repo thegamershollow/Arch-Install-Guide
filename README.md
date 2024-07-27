@@ -249,10 +249,63 @@ Generate the grub config file:
 # reboot
 ```
 
+## Post Install Configuration
 
+This section is optional but recommended because it gives you a desktop and display manager as well as other useful tools for Arch Linux.
 
+### Getting a Desktop environment and Display manager
 
+Here are some Desktop Environments that I recommend.
 
+| Desktop environment | Install Command | Pros | Cons |
+| ------------------- | --------------- | ---- | ---- |
+| XFCE | ```# pacman -S xfce4 xfce4-goodies xorg-server lightdm``` | Very Simple <br> Lightweight <br> Customizable | Lack of advanced features |
+| GNOME | ```# pacman -S gnome gnome-extras gdm``` | Easy to use <br> clean interface | Heavy on resources <br> not customizable |
+| KDE Plasma | ```# pacman -S plasma-meta kde-applications-meta sddm``` | Heavily cutomizable <br> clean interface | very resource intensive |
 
+There are other desktop environments you can choose but the above are what I reccomend if you want to get started.
 
+For the guide I will outline the setup for each DE (desktip environment) and DM (display manager) in the table above.
+
+#### XFCE 
+
+Use the command written below to install XFCE4 and the LightDM display manager:
+
+```
+# sudo pacman -S xfce4 xfce4-goodie xorg-server lightdm
+```
+
+then to enable lightdm:
+
+```
+# sudo systemctl enable --now lightdm
+```
+
+#### GNOME
+
+Use the command below to install GNOME and the GDM display manager:
+
+```
+# sudo pacman -S gnome gnome-extras gdm
+```
+
+then to enable gdm:
+
+```
+# sudo systemctl enable --now gdm
+```
+
+#### KDE Plasma
+
+Use the command below to install KDE Plasma and the SDDM display manager:
+
+```
+# sudo pacman -S plasma-meta kde-applications-meta sddm
+```
+
+then to enable sddm:
+
+```
+sudo systemctl enable --now sddm
+```
 
