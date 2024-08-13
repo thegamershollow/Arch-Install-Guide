@@ -272,7 +272,7 @@ For the guide I will outline the setup for each DE (desktop environment) and DM 
 Use the command written below to install XFCE4 and the LightDM display manager:
 
 ```
-# sudo pacman -S xfce4 xfce4-goodie xorg-server lightdm
+# sudo pacman -S xfce4 xfce4-goodies xorg-server lightdm
 ```
 
 then to enable lightdm:
