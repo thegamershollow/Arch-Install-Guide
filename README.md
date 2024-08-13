@@ -238,7 +238,7 @@ Generate the grub config file:
 #### Enable ssh and Networking
 
 ```
-# systemctl enable ssd
+# systemctl enable sshd
 
 # systemctl enable NetworkManager
 ```
@@ -265,7 +265,7 @@ Here are some Desktop Environments that I recommend.
 
 There are other desktop environments you can choose but the above are what I reccomend if you want to get started.
 
-For the guide I will outline the setup for each DE (desktip environment) and DM (display manager) in the table above.
+For the guide I will outline the setup for each DE (desktop environment) and DM (display manager) in the table above.
 
 #### XFCE 
 
